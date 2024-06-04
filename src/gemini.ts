@@ -1,8 +1,3 @@
-interface RequestBody {
-	userStoryName: string;
-	description: string;
-}
-
 interface GeminiBody {
 	candidates: Array<{
 		content: {
@@ -27,8 +22,6 @@ app.post('/gemini/pr', async (c) => {
 	const { API_KEY } = env<{ API_KEY: string }>(c)
 	try {
 		const { userStoryName, description } = body;
-		console.log(userStoryName, description)
-		// Construct the request payload
 		const defaultPrompt = `
 	Gemini estou precisando descrever em inglês no codecommit as melhorias que fiz no meu projeto.
 
