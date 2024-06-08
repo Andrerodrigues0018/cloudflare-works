@@ -24,6 +24,8 @@ app.post('/gemini/pr', async (c) => {
 		const { userStoryName, description } = body;
 		const defaultPrompt = `
 	Gemini estou precisando descrever em inglês no codecommit as melhorias que fiz no meu projeto.
+	Você não deve inventar sobre o que foi feito, somente criar adaptar o que foi escrito.
+	o titulo deve ser curto e eficaz
 
 	Template de exemplo:
 
